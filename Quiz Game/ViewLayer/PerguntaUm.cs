@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quiz_Game
+namespace Quiz_Game.ViewLayer
 {
-    public partial class Form1 : Form
+    public partial class PerguntaUm : Form
     {
-        public Form1()
+        public PerguntaUm()
         {
             InitializeComponent();
+        }
+
+        private void PerguntaUm_Load(object sender, EventArgs e)
+        {
+            TSSLVidas.Text = "Vidas: " + MainMenu.Vidas;
         }
     }
 }
