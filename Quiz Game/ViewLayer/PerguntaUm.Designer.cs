@@ -61,6 +61,7 @@
             this.btnRespostaD.TabIndex = 6;
             this.btnRespostaD.Text = "5 Mafagafinhos";
             this.btnRespostaD.UseVisualStyleBackColor = true;
+            this.btnRespostaD.Click += new System.EventHandler(this.RespostaCerta_Click);
             // 
             // btnRespostaA
             // 
@@ -71,6 +72,7 @@
             this.btnRespostaA.TabIndex = 3;
             this.btnRespostaA.Text = "2 Mafagafinhos";
             this.btnRespostaA.UseVisualStyleBackColor = true;
+            this.btnRespostaA.Click += new System.EventHandler(this.RespostaErrada_Click);
             // 
             // btnRespostaC
             // 
@@ -81,6 +83,7 @@
             this.btnRespostaC.TabIndex = 5;
             this.btnRespostaC.Text = "4 Mafagafinhos";
             this.btnRespostaC.UseVisualStyleBackColor = true;
+            this.btnRespostaC.Click += new System.EventHandler(this.RespostaErrada_Click);
             // 
             // btnRespostaB
             // 
@@ -91,6 +94,7 @@
             this.btnRespostaB.TabIndex = 4;
             this.btnRespostaB.Text = "3 Mafagafinhos";
             this.btnRespostaB.UseVisualStyleBackColor = true;
+            this.btnRespostaB.Click += new System.EventHandler(this.RespostaErrada_Click);
             // 
             // statusStrip1
             // 

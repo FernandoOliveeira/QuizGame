@@ -21,7 +21,7 @@ namespace Quiz_Game
             InitializeComponent();
         }
 
-        public static int Vidas { get; private set; } // Número de continues que o player terá
+        public static int Vidas { get; set; } // Número de continues que o player terá
 
         private void menuPrincipal_Load(object sender, EventArgs e)
         {
