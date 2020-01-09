@@ -35,11 +35,21 @@ namespace Quiz_Game.ViewLayer
 
         private void RespostaErrada_Click(object sender, EventArgs e)
         {
+            MainMenu.Vidas--;
+            TSSLVidas.Text = "Vidas: " + MainMenu.Vidas;
             string path = Directory.GetCurrentDirectory();
             string newPath = Path.GetFullPath(Path.Combine(path,"..","..", @".\sound effects\faustao-errou.wav"));
 
             SoundPlayer soundPlayer = new SoundPlayer(newPath);
             soundPlayer.Play();
+        }
+
+        private void TSSLVidas_TextChanged(object sender, EventArgs e)
+        {
+            if (MainMenu.Vidas == 0)
+            {
+                MessageBox.Show("Game Over", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

@@ -112,16 +112,17 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(234, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(219, 17);
             this.toolStripStatusLabel1.Spring = true;
             this.toolStripStatusLabel1.Text = "Version: 0.1.3.5.8.9.3.11.33333";
             // 
             // TSSLVidas
             // 
             this.TSSLVidas.Name = "TSSLVidas";
-            this.TSSLVidas.Size = new System.Drawing.Size(234, 17);
+            this.TSSLVidas.Size = new System.Drawing.Size(219, 17);
             this.TSSLVidas.Spring = true;
             this.TSSLVidas.Text = "Vidas: 0";
+            this.TSSLVidas.TextChanged += new System.EventHandler(this.TSSLVidas_TextChanged);
             // 
             // PerguntaUm
             // 
