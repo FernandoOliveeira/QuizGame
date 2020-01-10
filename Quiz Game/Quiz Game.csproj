@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\Functions.cs" />
+    <Compile Include="ViewLayer\GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +67,9 @@
     <Compile Include="ViewLayer\PerguntaUm.Designer.cs">
       <DependentUpon>PerguntaUm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewLayer\GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>

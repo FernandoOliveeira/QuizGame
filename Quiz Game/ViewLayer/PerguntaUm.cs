@@ -9,15 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using System.IO;
+using Quiz_Game.Control;
+using System.Threading;
 
 namespace Quiz_Game.ViewLayer
 {
     public partial class PerguntaUm : Form
     {
+        Thread thread;
+
         public PerguntaUm()
         {
             InitializeComponent();
         }
+
+        Functions functions = new Functions();
 
         private void PerguntaUm_Load(object sender, EventArgs e)
         {
@@ -26,30 +32,30 @@ namespace Quiz_Game.ViewLayer
 
         private void RespostaCerta_Click(object sender, EventArgs e)
         {
-            string path = Directory.GetCurrentDirectory();
-            string newPath = Path.GetFullPath(Path.Combine(path, "..", "..", @".\sound effects\ninho-de-mafagafos.wav"));
-
-            SoundPlayer soundPlayer = new SoundPlayer(newPath);
-            soundPlayer.Play();
+            functions.TocarRespostaCerta();
         }
 
         private void RespostaErrada_Click(object sender, EventArgs e)
         {
+            functions.TocarRespostaErrada();
+
             MainMenu.Vidas--;
             TSSLVidas.Text = "Vidas: " + MainMenu.Vidas;
-            string path = Directory.GetCurrentDirectory();
-            string newPath = Path.GetFullPath(Path.Combine(path,"..","..", @".\sound effects\faustao-errou.wav"));
 
-            SoundPlayer soundPlayer = new SoundPlayer(newPath);
-            soundPlayer.Play();
         }
 
         private void TSSLVidas_TextChanged(object sender, EventArgs e)
         {
             if (MainMenu.Vidas == 0)
             {
-                MessageBox.Show("Game Over", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                functions.TocarGameOver();
+
+                GameOver gameOver = new GameOver();
+                gameOver.ShowDialog();
+                this.Close();
+
             }
         }
+
     }
 }
