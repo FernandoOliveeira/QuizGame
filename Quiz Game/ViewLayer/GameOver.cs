@@ -13,11 +13,6 @@ namespace Quiz_Game.ViewLayer
             InitializeComponent();
         }
 
-        private void GameOver_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnOk_Click(object sender, EventArgs e)
         {
             this.Close();
