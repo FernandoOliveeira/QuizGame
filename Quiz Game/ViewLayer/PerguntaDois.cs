@@ -1,13 +1,20 @@
-﻿using System;
+﻿using Quiz_Game.Control;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using Quiz_Game.Control;
 
 namespace Quiz_Game.ViewLayer
 {
-    public partial class PerguntaUm : Form
+    public partial class PerguntaDois : Form
     {
-        public PerguntaUm()
+        public PerguntaDois()
         {
             InitializeComponent();
         }
@@ -15,19 +22,9 @@ namespace Quiz_Game.ViewLayer
         Thread thread;
         Functions functions = new Functions();
 
-        private void PerguntaUm_Load(object sender, EventArgs e)
+        private void PerguntaDois_Load(object sender, EventArgs e)
         {
             TSSLVidas.Text = "Vidas: " + MainMenu.Vidas;
-        }
-
-        private void RespostaCerta_Click(object sender, EventArgs e)
-        {
-            functions.TocarRespostaCerta();
-
-            this.Close();
-            thread = new Thread(AbrirPerguntaDois);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
         }
 
         private void RespostaErrada_Click(object sender, EventArgs e)
@@ -36,6 +33,16 @@ namespace Quiz_Game.ViewLayer
 
             MainMenu.Vidas--;
             TSSLVidas.Text = "Vidas: " + MainMenu.Vidas;
+        }
+
+        private void RespostaCerta_Click(object sender, EventArgs e)
+        {
+            functions.TocarRespostaCerta();
+
+            this.Close();
+            thread = new Thread(AbrirPerguntaTres);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
 
         }
 
@@ -52,9 +59,9 @@ namespace Quiz_Game.ViewLayer
             }
         }
 
-        private void AbrirPerguntaDois()
+        private void AbrirPerguntaTres()
         {
-            Application.Run(new PerguntaDois());
+            Application.Run(new PerguntaTres());
         }
 
     }
