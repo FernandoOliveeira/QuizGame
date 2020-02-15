@@ -1,13 +1,6 @@
 ﻿using Quiz_Game.Control;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quiz_Game.ViewLayer
@@ -48,7 +41,7 @@ namespace Quiz_Game.ViewLayer
 
         private void AbrirPerguntaQuatro()
         {
-            throw new NotImplementedException();
+            Application.Run(new PerguntaQuatro());
         }
 
         private void TSSLVidas_TextChanged(object sender, EventArgs e)

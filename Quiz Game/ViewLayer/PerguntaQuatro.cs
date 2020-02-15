@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Quiz_Game.Control;
+using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Quiz_Game.ViewLayer
@@ -15,6 +10,38 @@ namespace Quiz_Game.ViewLayer
         public PerguntaQuatro()
         {
             InitializeComponent();
+        }
+
+        Thread thread;
+        Functions functions = new Functions();
+
+        private void PerguntaQuatro_Load(object sender, EventArgs e)
+        {
+            TSSLVidas.Text = "Vidas: " + MainMenu.Vidas;
+        }
+
+        private void RespostaErrada_Click(object sender, EventArgs e)
+        {
+            functions.TocarRespostaErrada();
+
+            MainMenu.Vidas--;
+            TSSLVidas.Text = "Vidas: " + MainMenu.Vidas;
+        }
+
+        private void RespostaCerta_Click(object sender, EventArgs e)
+        {
+            functions.TocarRespostaCerta();
+
+            this.Close();
+            thread = new Thread(AbrirPerguntaCinco);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+
+        }
+
+        private void AbrirPerguntaCinco()
+        {
+            throw new NotImplementedException();
         }
     }
 }
