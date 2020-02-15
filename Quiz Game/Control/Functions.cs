@@ -36,5 +36,14 @@ namespace Quiz_Game.Control
             SoundPlayer soundPlayer = new SoundPlayer(newPath);
             soundPlayer.Play();
         }
+
+        public void TocarTrololo()
+        {
+            string path = Directory.GetCurrentDirectory();
+            string newPath = Path.GetFullPath(Path.Combine(path, "..", "..", @".\sound effects\Trolololo.wav"));
+
+            SoundPlayer soundPlayer = new SoundPlayer(newPath);
+            soundPlayer.Play();
+        }
     }
 }

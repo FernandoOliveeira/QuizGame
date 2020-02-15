@@ -134,6 +134,7 @@
             this.Controls.Add(this.btnRespostaA);
             this.Controls.Add(this.btnRespostaB);
             this.Controls.Add(this.btnRespostaC);
+            this.MaximizeBox = false;
             this.Name = "PerguntaDois";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pergunta 2";

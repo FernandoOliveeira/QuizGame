@@ -39,9 +39,22 @@ namespace Quiz_Game.ViewLayer
 
         }
 
+        private void TSSLVidas_TextChanged(object sender, EventArgs e)
+        {
+            if (MainMenu.Vidas == 0)
+            {
+                functions.TocarGameOver();
+
+                GameOver gameOver = new GameOver();
+                gameOver.ShowDialog();
+                this.Close();
+
+            }
+        }
+
         private void AbrirPerguntaCinco()
         {
-            throw new NotImplementedException();
+            Application.Run(new FimDeJogo());
         }
     }
 }

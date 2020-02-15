@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\Functions.cs" />
+    <Compile Include="ViewLayer\FimDeJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\FimDeJogo.Designer.cs">
+      <DependentUpon>FimDeJogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\GameOver.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="ViewLayer\PerguntaUm.Designer.cs">
       <DependentUpon>PerguntaUm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewLayer\FimDeJogo.resx">
+      <DependentUpon>FimDeJogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\GameOver.resx">
       <DependentUpon>GameOver.cs</DependentUpon>
     </EmbeddedResource>

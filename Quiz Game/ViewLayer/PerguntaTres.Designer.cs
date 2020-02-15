@@ -117,7 +117,7 @@
             // TSSLVidas
             // 
             this.TSSLVidas.Name = "TSSLVidas";
-            this.TSSLVidas.Size = new System.Drawing.Size(219, 17);
+            this.TSSLVidas.Size = new System.Drawing.Size(234, 17);
             this.TSSLVidas.Spring = true;
             this.TSSLVidas.Text = "Vidas: 0";
             this.TSSLVidas.TextChanged += new System.EventHandler(this.TSSLVidas_TextChanged);
@@ -133,6 +133,7 @@
             this.Controls.Add(this.btnRespostaA);
             this.Controls.Add(this.btnRespostaB);
             this.Controls.Add(this.btnRespostaC);
+            this.MaximizeBox = false;
             this.Name = "PerguntaTres";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pergunta 3";
